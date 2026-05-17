@@ -161,7 +161,10 @@ export default function WriterPage() {
     if (!editor) return;
     const handler = () => triggerAutosave();
     editor.on("update", handler);
-    return () => editor.off("update", handler);
+    return () => {
+        editor.off("update", handler);
+    }
+      
   }, [editor]);
 
   // --- COVER IMAGE ---
@@ -173,15 +176,6 @@ export default function WriterPage() {
     setCoverImage(URL.createObjectURL(file));
     triggerAutosave();
   };
-
-  // --- INLINE IMAGE ---
-  const handleInlineImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file || !editor) return;
-    const url = URL.createObjectURL(file);
-    editor.chain().focus().setImage({ src: url }).run();
-  };
-
   // --- PUBLISH ---
   const handlePublish = async () => {
     try {

@@ -67,7 +67,7 @@ export function ChatWindow({ onClose }: Props) {
     if (!text || loading) return;
 
     const userMsg = {
-      role: "user" as const,
+      role: "assistant" as const,
       content: text,
     };
 
@@ -142,7 +142,7 @@ export function ChatWindow({ onClose }: Props) {
       <div className="flex-1 overflow-y-auto px-3 py-4 space-y-4 bg-slate-50">
 
         {messages.map((m, i) => {
-          const isUser = m.role === "user";
+          const isUser = m.role === "assistant";
 
           return (
             <div

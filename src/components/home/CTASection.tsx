@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import {
-  PenLine, BookOpen, Users, Sparkles,
+  PenLine, Sparkles,
   Check, ArrowUp, Bold, Italic, Underline,
   Heading1, List, Code, ImageUp, Save,
 } from "lucide-react";
