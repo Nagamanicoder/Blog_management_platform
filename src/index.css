@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --color-primary: #4f46e5;     /* Indigo-600 */
+  --color-primary-dark: #4338ca;
+
+  --color-hover: #f97316;       /* Orange-500 */
+  --color-hover-dark: #ea580c;
+
+  --color-bg: #ffffff;
+  --color-text: #1f2937;        /* Gray-800 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
